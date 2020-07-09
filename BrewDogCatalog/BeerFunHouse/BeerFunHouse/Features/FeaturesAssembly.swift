@@ -24,10 +24,10 @@ public class FeatureAssembly: Assembly {
     let viewAssembly = BeerViewAssembly.instance()
 
 
-public var listing: BeerListingMediatorProtocol{
+    lazy public var listing: BeerListingMediatorProtocol = {
         return listingAssembly.listingMediator
-    }
-
+    }()
+    
 
     lazy public var view: BeerViewMediatorProtocol = {
         return viewAssembly.viewMediator

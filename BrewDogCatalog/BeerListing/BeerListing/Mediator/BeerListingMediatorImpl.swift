@@ -11,16 +11,16 @@ import UIKit
 import BeerMediator
 
 class BeerListingMediatorImpl: BeerListingMediatorProtocol {
-
+    
     let assembly: ListingAssembly
-
+    
     init(assembly: ListingAssembly) {
         self.assembly = assembly
     }
-
+    
     func getBeerListingViewController(params: [String : Any]) -> UIViewController {
         assembly.params = params
         return assembly.view
     }
-
+    
 }
