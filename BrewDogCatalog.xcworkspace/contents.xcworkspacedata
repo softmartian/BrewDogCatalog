@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BrewDogCatalog.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BrewDogCatalog/BeerMediator/BeerMediator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BrewDogCatalog/BeerFunHouse/BeerFunHouse.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BrewDogCatalog/BeerListing/BeerListing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BrewDogCatalog/BeerView/BeerView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,6 @@
+framework module Pods_BeerView {
+  umbrella header "Pods-BeerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
