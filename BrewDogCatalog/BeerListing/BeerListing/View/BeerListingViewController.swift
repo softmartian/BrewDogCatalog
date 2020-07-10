@@ -44,9 +44,9 @@ class BeerListingViewController: UIViewController {
     private func subscribeTableView() {
         let animation = AnimationConfiguration(insertAnimation: .none, reloadAnimation: .none, deleteAnimation: .automatic)
         
-        let dataSource = RxTableViewSectionedAnimatedDataSource<AnimatableSectionModel<String, String>>(animationConfiguration: animation, configureCell: {_, tableView, indexPath, viewModel in
+        let dataSource = RxTableViewSectionedAnimatedDataSource<AnimatableSectionModel<String, BeerEntity>>(animationConfiguration: animation, configureCell: {_, tableView, indexPath, viewModel in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = viewModel
+            cell.textLabel?.text = viewModel.name
             return cell
         }, canEditRowAtIndexPath: { _, _ in true})
         
@@ -62,10 +62,10 @@ class BeerListingViewController: UIViewController {
     }
     
     private func subscribeTableViewSelection() {
-        let binder = Binder<String>(self) {target, value in
-            target.presenter.itemSelected(id: value, from: target)
+        let binder = Binder<BeerEntity>(self) {target, value in
+            target.presenter.itemSelected(id: "\(value.id)", from: target)
         }
-        tableView.rx.modelSelected(String.self).bind(to: binder).disposed(by: bag)
+        tableView.rx.modelSelected(BeerEntity.self).bind(to: binder).disposed(by: bag)
     }
     
     private func setupConstraints() {

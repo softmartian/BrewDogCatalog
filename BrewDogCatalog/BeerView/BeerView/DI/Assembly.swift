@@ -9,6 +9,7 @@
 import Foundation
 import BeerMediator
 import EasyDi
+import Moya
 
 public protocol BeerViewAssemblyProtocol {
     static var instance: BeerViewAssemblyProtocol { get }
@@ -29,7 +30,7 @@ public class BeerViewAssembly: Assembly, BeerViewAssemblyProtocol {
 
     var presenter: BeerPresenterProtocol {
         guard let id = id else { fatalError("id must be set")}
-        return define(init: BeerPresenter(id: id))
+        return define(init: BeerPresenter(id: id, manager: self.manager))
     }
 
     var view: UIViewController {
@@ -39,6 +40,14 @@ public class BeerViewAssembly: Assembly, BeerViewAssemblyProtocol {
         }
         return BeerViewController(presenter: self.presenter, recommendationViewController: listingMediator.getBeerListingViewController(params: ["": ""]))
     }
+
+    var manager: DataManagerProtocol {
+          return define(init: DataManager(api: self.api))
+      }
+
+      var api: MoyaProvider<BeerViewMoyaService> {
+          return MoyaProvider<BeerViewMoyaService>()
+      }
 
     public var viewMediator: BeerViewMediatorProtocol {
         return define(init: BeerViewMediator(assembly: self))

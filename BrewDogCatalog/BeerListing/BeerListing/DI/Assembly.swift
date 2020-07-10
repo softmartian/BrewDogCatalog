@@ -9,6 +9,7 @@
 import Foundation
 import EasyDi
 import BeerMediator
+import Moya
 
 public protocol ListingAssemblyProtocol {
     static var instance: ListingAssemblyProtocol { get }
@@ -35,15 +36,25 @@ public class ListingAssembly: Assembly, ListingAssemblyProtocol {
         guard let params = params else {
             fatalError("params must be set")
         }
-        return define(init: Presenter(router: self.router, params: params))
+        return define(init: Presenter(manager: self.manager, router: self.router, params: params))
     }
     
     var view: UIViewController {
         return define(init: BeerListingViewController(presenter: self.presenter))
     }
+
+    var manager: DataManagerProtocol {
+        return define(init: DataManager(api: self.api))
+    }
+
+    var api: MoyaProvider<ListingMoyaService> {
+        return MoyaProvider<ListingMoyaService>()
+    }
     
     public var listingMediator: BeerListingMediatorProtocol {
         return define(init: BeerListingMediatorImpl(assembly: self))
     }
+
+
 }
 

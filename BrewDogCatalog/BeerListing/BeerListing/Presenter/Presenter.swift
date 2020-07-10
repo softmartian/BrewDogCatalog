@@ -11,16 +11,18 @@ import RxSwift
 
 class Presenter: ListingPresenterProtocol {
     
-    var items: Observable<[String]> {
-        let array = ["item1", "item2", "item3"]
-        return Observable.just(array)
+    var items: Observable<[BeerEntity]> {
+        return manager.getBeers(params: params).observeOn(MainScheduler.instance)
     }
     
     let params: [String: Any]
     
     let router: RouterProtocol
+
+    let manager: DataManagerProtocol
     
-    init(router: RouterProtocol, params: [String: Any]) {
+    init(manager: DataManagerProtocol, router: RouterProtocol, params: [String: Any]) {
+        self.manager = manager
         self.router = router
         self.params = params
     }

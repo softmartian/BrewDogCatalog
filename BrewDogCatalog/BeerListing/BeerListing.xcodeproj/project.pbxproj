@@ -20,6 +20,10 @@
 		8499833924B5C9EC0027F2C1 /* ListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499833824B5C9EC0027F2C1 /* ListPresenterProtocol.swift */; };
 		8499833D24B5CB9C0027F2C1 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499833C24B5CB9C0027F2C1 /* RouterProtocol.swift */; };
 		8499833F24B5CD7A0027F2C1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499833E24B5CD7A0027F2C1 /* Presenter.swift */; };
+		84CDD96324B8620D0044B23D /* ListingMoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD96224B8620D0044B23D /* ListingMoyaService.swift */; };
+		84CDD96624B87D870044B23D /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD96524B87D870044B23D /* DataManagerProtocol.swift */; };
+		84CDD96924B87DF80044B23D /* BeerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD96824B87DF80044B23D /* BeerEntity.swift */; };
+		84CDD96B24B87E3B0044B23D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD96A24B87E3B0044B23D /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		8499833824B5C9EC0027F2C1 /* ListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterProtocol.swift; sourceTree = "<group>"; };
 		8499833C24B5CB9C0027F2C1 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		8499833E24B5CD7A0027F2C1 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		84CDD96224B8620D0044B23D /* ListingMoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingMoyaService.swift; sourceTree = "<group>"; };
+		84CDD96524B87D870044B23D /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
+		84CDD96824B87DF80044B23D /* BeerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerEntity.swift; sourceTree = "<group>"; };
+		84CDD96A24B87E3B0044B23D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8D40433EEB99967ED18CDEFF /* Pods_BeerListing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerListing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E262C0856E66292792C03D /* Pods-BeerListing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerListing.debug.xcconfig"; path = "Target Support Files/Pods-BeerListing/Pods-BeerListing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +143,8 @@
 		8499831824B5BC7D0027F2C1 /* BeerListing */ = {
 			isa = PBXGroup;
 			children = (
+				84CDD96724B87DEB0044B23D /* Entity */,
+				84CDD96124B861F00044B23D /* DataManager */,
 				84709C2324B7067E00A9C5DE /* Mediator */,
 				84709C2024B6FF0400A9C5DE /* DI */,
 				84709BE124B5ECF900A9C5DE /* Router */,
@@ -179,6 +189,24 @@
 				8499833C24B5CB9C0027F2C1 /* RouterProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84CDD96124B861F00044B23D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				84CDD96224B8620D0044B23D /* ListingMoyaService.swift */,
+				84CDD96524B87D870044B23D /* DataManagerProtocol.swift */,
+				84CDD96A24B87E3B0044B23D /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		84CDD96724B87DEB0044B23D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				84CDD96824B87DF80044B23D /* BeerEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		E5F69DCE971A5376E868B99B /* Pods */ = {
@@ -342,9 +370,13 @@
 				8499833924B5C9EC0027F2C1 /* ListPresenterProtocol.swift in Sources */,
 				84709C2224B6FF1500A9C5DE /* Assembly.swift in Sources */,
 				84709BE324B5ED4400A9C5DE /* ListingRouter.swift in Sources */,
+				84CDD96324B8620D0044B23D /* ListingMoyaService.swift in Sources */,
 				8499833D24B5CB9C0027F2C1 /* RouterProtocol.swift in Sources */,
 				8499833F24B5CD7A0027F2C1 /* Presenter.swift in Sources */,
 				8499833224B5BCA30027F2C1 /* BeerListingViewController.swift in Sources */,
+				84CDD96B24B87E3B0044B23D /* DataManager.swift in Sources */,
+				84CDD96924B87DF80044B23D /* BeerEntity.swift in Sources */,
+				84CDD96624B87D870044B23D /* DataManagerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

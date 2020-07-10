@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-public protocol BeerPresenterProtocol {
+ protocol BeerPresenterProtocol {
     var item: Observable <String> { get }
 }

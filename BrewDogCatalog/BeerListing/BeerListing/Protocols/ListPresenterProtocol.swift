@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol ListingPresenterProtocol {
-    var items: Observable<[String]> { get }
+    var items: Observable<[BeerEntity]> { get }
     func itemSelected(id: String, from viewController: UIViewController)
 }
 

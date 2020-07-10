@@ -25,7 +25,7 @@ class ViewController: UITabBarController {
         listingNavigation.tabBarItem = listItem
 
         let viewItem = UITabBarItem(title: "View", image: nil, selectedImage: nil)
-        let viewVC = features.view.getBeerViewController(id: "123")
+        let viewVC = features.view.getBeerViewController(id: "1")
            let viewNavigation = UINavigationController(rootViewController: viewVC)
            viewNavigation.tabBarItem = viewItem
 

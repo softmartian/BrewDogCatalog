@@ -9,14 +9,16 @@
 import Foundation
 import RxSwift
 
-public class BeerPresenter: BeerPresenterProtocol {
+ class BeerPresenter: BeerPresenterProtocol {
 
     let id: String
-    public init(id: String) {
+    let manager: DataManagerProtocol
+     init(id: String, manager: DataManagerProtocol) {
         self.id = id
+        self.manager = manager
     }
 
-    public var item: Observable<String> {
-        return Observable.just("Beer id: \(id)")
+     var item: Observable<String> {
+        return manager.getBeer(id: id).map {$0.name}.observeOn(MainScheduler.instance)
     }
 }

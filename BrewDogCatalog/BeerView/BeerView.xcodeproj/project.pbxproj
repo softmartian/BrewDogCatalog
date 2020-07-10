@@ -18,6 +18,10 @@
 		8499836924B5DAB70027F2C1 /* BeerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499836824B5DAB70027F2C1 /* BeerPresenterProtocol.swift */; };
 		8499836C24B5DC380027F2C1 /* BeerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499836B24B5DC380027F2C1 /* BeerPresenter.swift */; };
 		8499836F24B5E0E80027F2C1 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499836E24B5E0E80027F2C1 /* BeerViewController.swift */; };
+		84CDD95924B847230044B23D /* BeerViewMoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95824B847230044B23D /* BeerViewMoyaService.swift */; };
+		84CDD95B24B8573C0044B23D /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95A24B8573C0044B23D /* DataManagerProtocol.swift */; };
+		84CDD95E24B857B40044B23D /* BeerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95D24B857B40044B23D /* BeerEntity.swift */; };
+		84CDD96024B858550044B23D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95F24B858550044B23D /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		8499836824B5DAB70027F2C1 /* BeerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerPresenterProtocol.swift; sourceTree = "<group>"; };
 		8499836B24B5DC380027F2C1 /* BeerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerPresenter.swift; sourceTree = "<group>"; };
 		8499836E24B5E0E80027F2C1 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		84CDD95824B847230044B23D /* BeerViewMoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewMoyaService.swift; sourceTree = "<group>"; };
+		84CDD95A24B8573C0044B23D /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
+		84CDD95D24B857B40044B23D /* BeerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerEntity.swift; sourceTree = "<group>"; };
+		84CDD95F24B858550044B23D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D8E42CD22D8DDD18A4A655F8 /* Pods-BeerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerView.debug.xcconfig"; path = "Target Support Files/Pods-BeerView/Pods-BeerView.debug.xcconfig"; sourceTree = "<group>"; };
 		FC46DDDD39AFFAA5A228BDC4 /* Pods-BeerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerView.release.xcconfig"; path = "Target Support Files/Pods-BeerView/Pods-BeerView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +140,8 @@
 		8499834C24B5D91D0027F2C1 /* BeerView */ = {
 			isa = PBXGroup;
 			children = (
+				84CDD95C24B857A40044B23D /* Entity */,
+				84CDD95724B845330044B23D /* DataManager */,
 				84709C2924B72A9200A9C5DE /* Mediator */,
 				84709C2824B7290A00A9C5DE /* DI */,
 				8499836D24B5E0D50027F2C1 /* View */,
@@ -174,6 +184,24 @@
 				8499836E24B5E0E80027F2C1 /* BeerViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		84CDD95724B845330044B23D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				84CDD95824B847230044B23D /* BeerViewMoyaService.swift */,
+				84CDD95A24B8573C0044B23D /* DataManagerProtocol.swift */,
+				84CDD95F24B858550044B23D /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		84CDD95C24B857A40044B23D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				84CDD95D24B857B40044B23D /* BeerEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		A6E383800D0026C1F1FB7D99 /* Frameworks */ = {
@@ -322,10 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CDD95924B847230044B23D /* BeerViewMoyaService.swift in Sources */,
+				84CDD95B24B8573C0044B23D /* DataManagerProtocol.swift in Sources */,
 				84709C2724B7282400A9C5DE /* Assembly.swift in Sources */,
 				84709C2B24B72AB300A9C5DE /* BeerViewMediator.swift in Sources */,
 				8499836C24B5DC380027F2C1 /* BeerPresenter.swift in Sources */,
 				8499836924B5DAB70027F2C1 /* BeerPresenterProtocol.swift in Sources */,
+				84CDD95E24B857B40044B23D /* BeerEntity.swift in Sources */,
+				84CDD96024B858550044B23D /* DataManager.swift in Sources */,
 				8499836F24B5E0E80027F2C1 /* BeerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

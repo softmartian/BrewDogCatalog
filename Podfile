@@ -15,7 +15,8 @@ def ui_pods
 end
 
 def manager_pods
-
+  pod 'Moya/RxSwift'
+  pod 'Moya-ObjectMapper/RxSwift'
 end
 
 target 'BrewDogCatalog' do
@@ -33,6 +34,7 @@ target 'BeerListing' do
   project 'BrewDogCatalog/BeerListing/BeerListing'
   ui_pods
   common_pods
+  manager_pods
 end
 
 target 'BeerView' do
@@ -41,6 +43,7 @@ target 'BeerView' do
   project 'BrewDogCatalog/BeerView/BeerView'
   ui_pods
   common_pods
+  manager_pods
 end
 
 target 'BeerFunHouse' do

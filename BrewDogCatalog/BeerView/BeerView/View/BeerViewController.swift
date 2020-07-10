@@ -12,7 +12,7 @@ import RxSwift
 import UIKit
 import SnapKit
 
-public class BeerViewController: UIViewController {
+ class BeerViewController: UIViewController {
 
     lazy var label: UILabel = {
         let label = UILabel()
@@ -32,7 +32,7 @@ public class BeerViewController: UIViewController {
     let presenter: BeerPresenterProtocol
     let recommendationViewController: UIViewController
 
-    public init(presenter: BeerPresenterProtocol, recommendationViewController: UIViewController) {
+     init(presenter: BeerPresenterProtocol, recommendationViewController: UIViewController) {
         self.presenter = presenter
         self.recommendationViewController = recommendationViewController
         super.init(nibName: nil, bundle: nil)
