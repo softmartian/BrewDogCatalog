@@ -11,4 +11,5 @@ import RxSwift
 
  protocol BeerPresenterProtocol {
     var item: Observable <String> { get }
+    var recommendations: Observable<[String: Any]>  { get }
 }

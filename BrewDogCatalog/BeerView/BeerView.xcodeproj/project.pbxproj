@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,10 +22,24 @@
 		84CDD95B24B8573C0044B23D /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95A24B8573C0044B23D /* DataManagerProtocol.swift */; };
 		84CDD95E24B857B40044B23D /* BeerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95D24B857B40044B23D /* BeerEntity.swift */; };
 		84CDD96024B858550044B23D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD95F24B858550044B23D /* DataManager.swift */; };
+		84CDD97324BB0BC20044B23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD97224BB0BC20044B23D /* AppDelegate.swift */; };
+		84CDD97524BB0BC20044B23D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD97424BB0BC20044B23D /* SceneDelegate.swift */; };
+		84CDD97C24BB0BCC0044B23D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CDD97B24BB0BCC0044B23D /* Assets.xcassets */; };
+		84CDD97F24BB0BCC0044B23D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CDD97D24BB0BCC0044B23D /* LaunchScreen.storyboard */; };
+		84CDD99224BB1A770044B23D /* BeerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8499834A24B5D91D0027F2C1 /* BeerView.framework */; };
+		84CDD99324BB1A770044B23D /* BeerView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8499834A24B5D91D0027F2C1 /* BeerView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4D13EDC4CBFE104A6E18B89 /* Pods_BeerViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18D91B514007E6FF9FEB330 /* Pods_BeerViewExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8499835524B5D91D0027F2C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8499834124B5D91D0027F2C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8499834924B5D91D0027F2C1;
+			remoteInfo = BeerView;
+		};
+		84CDD99424BB1A770044B23D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8499834124B5D91D0027F2C1 /* Project object */;
 			proxyType = 1;
@@ -46,10 +60,23 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84CDD99624BB1A770044B23D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84CDD99324BB1A770044B23D /* BeerView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06FD1DBBC420C5CA4DBB1CC1 /* Pods_BeerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F94A9640CCAED5FEB2853A /* Pods-BeerViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerViewExample.debug.xcconfig"; path = "Target Support Files/Pods-BeerViewExample/Pods-BeerViewExample.debug.xcconfig"; sourceTree = "<group>"; };
+		3B65BAF1B7ADA64020CC8776 /* Pods-BeerViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerViewExample.release.xcconfig"; path = "Target Support Files/Pods-BeerViewExample/Pods-BeerViewExample.release.xcconfig"; sourceTree = "<group>"; };
 		84709BAB24B5E9A600A9C5DE /* BeerMediator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BeerMediator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84709C2624B7282400A9C5DE /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		84709C2A24B72AB300A9C5DE /* BeerViewMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewMediator.swift; sourceTree = "<group>"; };
@@ -66,6 +93,13 @@
 		84CDD95A24B8573C0044B23D /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
 		84CDD95D24B857B40044B23D /* BeerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerEntity.swift; sourceTree = "<group>"; };
 		84CDD95F24B858550044B23D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		84CDD97024BB0BC10044B23D /* BeerViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CDD97224BB0BC20044B23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84CDD97424BB0BC20044B23D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84CDD97B24BB0BCC0044B23D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84CDD97E24BB0BCC0044B23D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84CDD98024BB0BCC0044B23D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18D91B514007E6FF9FEB330 /* Pods_BeerViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E42CD22D8DDD18A4A655F8 /* Pods-BeerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerView.debug.xcconfig"; path = "Target Support Files/Pods-BeerView/Pods-BeerView.debug.xcconfig"; sourceTree = "<group>"; };
 		FC46DDDD39AFFAA5A228BDC4 /* Pods-BeerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerView.release.xcconfig"; path = "Target Support Files/Pods-BeerView/Pods-BeerView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +122,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84CDD96D24BB0BC10044B23D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D13EDC4CBFE104A6E18B89 /* Pods_BeerViewExample.framework in Frameworks */,
+				84CDD99224BB1A770044B23D /* BeerView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +139,8 @@
 			children = (
 				D8E42CD22D8DDD18A4A655F8 /* Pods-BeerView.debug.xcconfig */,
 				FC46DDDD39AFFAA5A228BDC4 /* Pods-BeerView.release.xcconfig */,
+				31F94A9640CCAED5FEB2853A /* Pods-BeerViewExample.debug.xcconfig */,
+				3B65BAF1B7ADA64020CC8776 /* Pods-BeerViewExample.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -122,6 +167,7 @@
 			children = (
 				8499834C24B5D91D0027F2C1 /* BeerView */,
 				8499835724B5D91D0027F2C1 /* BeerViewTests */,
+				84CDD97124BB0BC20044B23D /* BeerViewExample */,
 				8499834B24B5D91D0027F2C1 /* Products */,
 				0220BD09CCE66F6C5270DFAA /* Pods */,
 				A6E383800D0026C1F1FB7D99 /* Frameworks */,
@@ -133,6 +179,7 @@
 			children = (
 				8499834A24B5D91D0027F2C1 /* BeerView.framework */,
 				8499835324B5D91D0027F2C1 /* BeerViewTests.xctest */,
+				84CDD97024BB0BC10044B23D /* BeerViewExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,11 +251,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		84CDD97124BB0BC20044B23D /* BeerViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				84CDD97224BB0BC20044B23D /* AppDelegate.swift */,
+				84CDD97424BB0BC20044B23D /* SceneDelegate.swift */,
+				84CDD97B24BB0BCC0044B23D /* Assets.xcassets */,
+				84CDD97D24BB0BCC0044B23D /* LaunchScreen.storyboard */,
+				84CDD98024BB0BCC0044B23D /* Info.plist */,
+			);
+			path = BeerViewExample;
+			sourceTree = "<group>";
+		};
 		A6E383800D0026C1F1FB7D99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				84709BAB24B5E9A600A9C5DE /* BeerMediator.framework */,
 				06FD1DBBC420C5CA4DBB1CC1 /* Pods_BeerView.framework */,
+				C18D91B514007E6FF9FEB330 /* Pods_BeerViewExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,6 +325,27 @@
 			productReference = 8499835324B5D91D0027F2C1 /* BeerViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		84CDD96F24BB0BC10044B23D /* BeerViewExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CDD99024BB0BCC0044B23D /* Build configuration list for PBXNativeTarget "BeerViewExample" */;
+			buildPhases = (
+				4635F7C134AD32641BB38D68 /* [CP] Check Pods Manifest.lock */,
+				84CDD96C24BB0BC10044B23D /* Sources */,
+				84CDD96D24BB0BC10044B23D /* Frameworks */,
+				84CDD96E24BB0BC10044B23D /* Resources */,
+				0F6FB7D9E79BF7FF59B232AC /* [CP] Embed Pods Frameworks */,
+				84CDD99624BB1A770044B23D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CDD99524BB1A770044B23D /* PBXTargetDependency */,
+			);
+			name = BeerViewExample;
+			productName = BeerViewExample;
+			productReference = 84CDD97024BB0BC10044B23D /* BeerViewExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,6 +361,9 @@
 						LastSwiftMigration = 1150;
 					};
 					8499835224B5D91D0027F2C1 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					84CDD96F24BB0BC10044B23D = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -299,6 +383,7 @@
 			targets = (
 				8499834924B5D91D0027F2C1 /* BeerView */,
 				8499835224B5D91D0027F2C1 /* BeerViewTests */,
+				84CDD96F24BB0BC10044B23D /* BeerViewExample */,
 			);
 		};
 /* End PBXProject section */
@@ -318,9 +403,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84CDD96E24BB0BC10044B23D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CDD97F24BB0BCC0044B23D /* LaunchScreen.storyboard in Resources */,
+				84CDD97C24BB0BCC0044B23D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0F6FB7D9E79BF7FF59B232AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeerViewExample/Pods-BeerViewExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeerViewExample/Pods-BeerViewExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeerViewExample/Pods-BeerViewExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		40621D4C266759F01B8FAD7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +448,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BeerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4635F7C134AD32641BB38D68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeerViewExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,6 +503,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84CDD96C24BB0BC10044B23D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CDD97324BB0BC20044B23D /* AppDelegate.swift in Sources */,
+				84CDD97524BB0BC20044B23D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -378,7 +520,23 @@
 			target = 8499834924B5D91D0027F2C1 /* BeerView */;
 			targetProxy = 8499835524B5D91D0027F2C1 /* PBXContainerItemProxy */;
 		};
+		84CDD99524BB1A770044B23D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8499834924B5D91D0027F2C1 /* BeerView */;
+			targetProxy = 84CDD99424BB1A770044B23D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84CDD97D24BB0BCC0044B23D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CDD97E24BB0BCC0044B23D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8499835C24B5D91D0027F2C1 /* Debug */ = {
@@ -592,6 +750,44 @@
 			};
 			name = Release;
 		};
+		84CDD98C24BB0BCC0044B23D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F94A9640CCAED5FEB2853A /* Pods-BeerViewExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5868F2M69;
+				INFOPLIST_FILE = BeerViewExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.schibstedbelarus.kufar.BeerViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84CDD98D24BB0BCC0044B23D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B65BAF1B7ADA64020CC8776 /* Pods-BeerViewExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5868F2M69;
+				INFOPLIST_FILE = BeerViewExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.schibstedbelarus.kufar.BeerViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,6 +814,15 @@
 			buildConfigurations = (
 				8499836224B5D91D0027F2C1 /* Debug */,
 				8499836324B5D91D0027F2C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CDD99024BB0BCC0044B23D /* Build configuration list for PBXNativeTarget "BeerViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CDD98C24BB0BCC0044B23D /* Debug */,
+				84CDD98D24BB0BCC0044B23D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

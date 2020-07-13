@@ -11,7 +11,7 @@ import BeerMediator
 import EasyDi
 import Moya
 
-public protocol BeerViewAssemblyProtocol {
+public protocol BeerViewAssemblyProtocol: class {
     static var instance: BeerViewAssemblyProtocol { get }
     var viewMediator: BeerViewMediatorProtocol { get }
     
@@ -38,7 +38,7 @@ public class BeerViewAssembly: Assembly, BeerViewAssemblyProtocol {
         guard let listingMediator = listingMediator else {
             fatalError("mediator must be injected")
         }
-        return BeerViewController(presenter: self.presenter, recommendationViewController: listingMediator.getBeerListingViewController(params: ["": ""]))
+        return BeerViewController(presenter: self.presenter, recommendations: listingMediator)
     }
 
     var manager: DataManagerProtocol {

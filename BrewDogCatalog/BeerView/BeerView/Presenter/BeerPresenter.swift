@@ -8,9 +8,9 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
- class BeerPresenter: BeerPresenterProtocol {
-
+class BeerPresenter: BeerPresenterProtocol {
     let id: String
     let manager: DataManagerProtocol
      init(id: String, manager: DataManagerProtocol) {
@@ -21,4 +21,16 @@ import RxSwift
      var item: Observable<String> {
         return manager.getBeer(id: id).map {$0.name}.observeOn(MainScheduler.instance)
     }
+
+    var recommendations: Observable<[String: Any]> {
+        return manager.getBeer(id: id).map {["abv_lt": $0.abv + 1,
+                                             "abv_gt": $0.abv - 1,
+                                             "ibu_lt": $0.ibu + 10,
+                                             "ibu_gt": $0.ibu - 10]}
+            .observeOn(MainScheduler.instance)
+    }
+
+
+
+
 }

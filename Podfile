@@ -21,16 +21,16 @@ end
 
 target 'BrewDogCatalog' do
   use_frameworks!
-
+  
   common_pods
   ui_pods
   manager_pods
-
+  
 end
 
 target 'BeerListing' do
   use_frameworks!
-
+  
   project 'BrewDogCatalog/BeerListing/BeerListing'
   ui_pods
   common_pods
@@ -39,7 +39,16 @@ end
 
 target 'BeerView' do
   use_frameworks!
+  
+  project 'BrewDogCatalog/BeerView/BeerView'
+  ui_pods
+  common_pods
+  manager_pods
+end
 
+target 'BeerViewExample' do
+  use_frameworks!
+  
   project 'BrewDogCatalog/BeerView/BeerView'
   ui_pods
   common_pods
@@ -50,5 +59,5 @@ target 'BeerFunHouse' do
   use_frameworks!
   project 'BrewDogCatalog/BeerFunHouse/BeerFunHouse'
   common_pods
-  end
+end
 

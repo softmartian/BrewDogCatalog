@@ -12,11 +12,15 @@ import ObjectMapper
 struct BeerEntity {
     let name: String
     let id: Int
+    let abv: Double
+    let ibu: Double
 }
 
 extension BeerEntity: ImmutableMappable {
     init(map: Map) throws {
         id = try map.value("id")
         name = try map.value("name")
+        abv = try map.value("abv")
+        ibu = try map.value("ibu")
     }
 }

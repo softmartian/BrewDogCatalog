@@ -11,6 +11,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 import SnapKit
+import BeerMediator
 
  class BeerViewController: UIViewController {
 
@@ -30,11 +31,11 @@ import SnapKit
 
     let bag = DisposeBag()
     let presenter: BeerPresenterProtocol
-    let recommendationViewController: UIViewController
+    let recommendationMediator: BeerListingMediatorProtocol?
 
-     init(presenter: BeerPresenterProtocol, recommendationViewController: UIViewController) {
+     init(presenter: BeerPresenterProtocol, recommendations: BeerListingMediatorProtocol?) {
         self.presenter = presenter
-        self.recommendationViewController = recommendationViewController
+        self.recommendationMediator = recommendations
         super.init(nibName: nil, bundle: nil)
 
     }
@@ -46,12 +47,15 @@ import SnapKit
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupRecommendationView()
+
         setupConstraints()
         subscribe()
     }
 
-    func setupRecommendationView() {
+    func setupRecommendationView(params: [String: Any]) {
+        guard let recommendationViewController = recommendationMediator?.getBeerListingViewController(params: params) else {
+            return
+        }
         self.addChild(recommendationViewController)
         recommendationView.addSubview(recommendationViewController.view)
         recommendationViewController.didMove(toParent: self)
@@ -71,5 +75,6 @@ import SnapKit
 
     func subscribe() {
         presenter.item.bind(to: label.rx.text).disposed(by: bag)
+        presenter.recommendations.subscribe(onNext: {[weak self] params in self?.setupRecommendationView(params: params)}).disposed(by: bag)
     }
 }
